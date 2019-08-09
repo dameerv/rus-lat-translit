@@ -6,3 +6,4 @@ It resives string, and return sting too.
 
 This is not security, so you shouldn't use it for transliting users text.
 I used it only for translit fake data in Symfony 4 projects.
+For instance, to make fake email addresses, or logins from russian names.
