@@ -1,0 +1,58 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: User
+ * Date: 08.08.2019
+ * Time: 17:19
+ */
+
+namespace App\Helpers;
+
+
+class Transliterator
+{
+    private $russianLetters =[
+        'а' => 'a',
+        'б' => 'b',
+        'в' => 'v',
+        'г' => 'g',
+        'д' => 'd',
+        'е' => 'e',
+        'ё' => 'e',
+        'ж' => 'zh',
+        'з' => 'z',
+        'и' => 'i',
+        'й' => 'i',
+        'к' => 'k',
+        'л' => 'l',
+        'м' => 'm',
+        'н' => 'n',
+        'о' => 'o',
+        'п' => 'p',
+        'р' => 'r',
+        'с' => 's',
+        'т' => 't',
+        'у' => 'u',
+        'ф' => 'f',
+        'х' => 'kh',
+        'ц' => 'ts',
+        'ч' => 'ch',
+        'ш' => 'sh',
+        'щ' => 'shch',
+        'ы' => 'y',
+        'ъ' => 'ie',
+        'э' => 'e',
+        'ю' => 'iu',
+        'я' => 'ia',
+    ];
+
+    public function translitPhrase($phrase)
+    {
+        $phrase = function_exists('mb_strtolower') ? mb_strtolower($phrase) : strtolower($phrase);
+
+        $phrase = strtr($phrase, $this->russianLetters);
+
+        return $phrase;
+    }
+
+}
