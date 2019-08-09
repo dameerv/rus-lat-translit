@@ -40,6 +40,7 @@ class Transliterator
         'ш' => 'sh',
         'щ' => 'shch',
         'ы' => 'y',
+        'ь' => '',
         'ъ' => 'ie',
         'э' => 'e',
         'ю' => 'iu',
